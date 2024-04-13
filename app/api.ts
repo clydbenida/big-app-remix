@@ -10,8 +10,8 @@ export default async function api<T>(method: string, url: string, data?: T | nul
       body: JSON.stringify(data)
     });
 
-    return resp.headers;
-  } catch(err) {
+    return resp.json();
+  } catch (err) {
     console.log(err);
   }
 }
